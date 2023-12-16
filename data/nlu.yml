@@ -1,0 +1,170 @@
+version: "3.1"
+
+nlu:
+- intent: selam
+  examples: |
+    - Selam!
+    - Merhaba
+    - Hey
+    - Selamlar
+    - Naber?
+
+- intent: hal_hatir_soru
+  examples: |
+    - Nasılsınız?
+    - Siz nasılsınız?
+    - Hal hatır sormak istiyorum
+    - Merhaba, nasıl gidiyor?
+    - İyi günler, nasılsınız?
+
+- intent: vedala
+  examples: |
+    - Hoşça kal
+    - Görüşürüz
+    - Bye
+    - Güle güle
+    - Hoşça kalın
+
+- intent: numara_dogrulama
+  examples: |
+    - Telefon numaramı nasıl doğrularım?
+    - Numaramı nasıl güncellerim?
+    - Numara doğrulama işlemi nasıl yapılır?
+    - TC kimlik ile numara doğrulama
+    - Numaramı doğruladım, ne yapmalıyım?
+
+- intent: giris_sorunu
+  examples: |
+    - Giriş yapamıyorum
+    - Hesabıma giriş yapamıyorum
+    - Şifremi unuttum, giriş yapamıyorum
+    - Kullanıcı adı ve şifre ile girişte sorun yaşıyorum
+    - Neden hesabıma giriş yapamıyorum?
+
+- intent: police_goruntuleme
+  examples: |
+    - Poliçelerimi nasıl görüntülerim?
+    - Aktif poliçelerim nerede?
+    - Geçmiş poliçelerimi nasıl inceleyebilirim?
+    - Sigorta poliçelerim
+    - Hangi poliçelerim aktif?
+
+- intent: police_yenileme
+  examples: |
+    - Poliçemi nasıl yenilerim?
+    - Sigorta poliçemi nasıl uzatırım?
+    - Poliçe yenileme süreci nedir?
+    - Yeni poliçe nasıl alırım?
+    - Sigorta poliçemi nasıl güncellerim?
+
+- intent: policede_degisiklik
+  examples: |
+    - Poliçemde değişiklik yapma
+    - Sigorta poliçemi nasıl değiştiririm?
+    - Mevcut poliçemi nasıl güncellerim?
+    - Poliçede değişiklik yapmak mümkün mü?
+    - Sigorta poliçemi nasıl düzenlerim?
+
+- intent: police_iptal
+  examples: |
+    - Poliçemi nasıl iptal ederim?
+    - Sigorta poliçemi sonlandırmak istiyorum
+    - İptal işlemi nasıl yapılır?
+    - Poliçemi sona erdirmek istiyorum
+    - Sigorta poliçemi iptal etmek istiyorum.
+
+- intent: cihaz_sorunu
+  examples: |
+    - ** model cihazımı sisteme nasıl eklerim?
+    - Cihaz ekleme işlemi nasıl yapılır?
+    - ** model cihazımı ekleyemiyorum
+    - Cihazımı sisteme ekledim ama poliçe satın alamıyorum
+    - ** model cihazım sistemde görünmüyor
+
+- intent: hasar_bildirme
+  examples: |
+    - Hasar nasıl bildirilir?
+    - Kaza durumunda ne yapmalıyım?
+    - Sigorta hasar işlemleri
+    - Hasar durumunda ne yapmalıyım?
+    - Kasko hasar bildirimi nasıl yapılır?
+
+- intent: puan_kullanimi
+  examples: |
+    - Kazanılan puanlar nasıl kullanılır?
+    - Puanlarımı nasıl harcarım?
+    - Poliçe satın almak için puan kullanma
+    - Puan kullanarak indirim alabilir miyim?
+    - Puanlarımı nasıl değerlendirebilirim?
+
+- intent: puan_takip
+  examples: |
+    - Puanlarımı nasıl takip ederim?
+    - Cüzdanımdaki puan miktarı nedir?
+    - Kazandığım puanları nasıl kontrol ederim?
+    - Puanlarımı nereden görebilirim?
+    - Mevcut puanlarımı öğrenmek istiyorum.
+
+- intent: puan_kart_kullanimi
+  examples: |
+    - Puanlarımı kullanarak poliçe satın alabilir miyim?
+    - Puanlarımı kredi kartımla birleştirebilir miyim?
+    - Poliçe ücretini tamamen puanlarla ödeyebilir miyim?
+    - Kredi kartı ve puan birleştirme
+    - Puanlarımı kullanarak poliçe fiyatını düşürebilir miyim?
+
+- intent: puan_aktif
+  examples: |
+    - Kazandığım puanlar hemen aktif mi olacak?
+    - Puanlarım ne zaman kullanılabilir?
+    - Puanlar hemen kullanılabilir mi?
+    - Kazanılan puanlar ne zaman geçerli olur?
+    - Aktif olan puanlarımı nasıl kullanabilirim?
+
+- intent: puan_tly_karsiligi
+  examples: |
+    - 1 puan kaç TL'ye denk geliyor?
+    - Puanların Türk Lirası karşılığı nedir?
+    - Puanlarımı TL'ye çevirebilir miyim?
+    - Bir puan kaç para eder?
+    - Puanlarımın TL değeri nedir?
+
+- intent: puan_son_kullanim
+  examples: |
+    - Puanlar ne kadar süreyle geçerli?
+    - Puanlarımın son kullanma tarihi nedir?
+    - Aktif puanlarımı ne zaman kullanmalıyım?
+    - Puanlarımın geçerlilik süresi nedir?
+    - Son kullanma tarihi geçen puanlar ne olur?
+
+- intent: puan_taksit
+  examples: |
+    - Bir poliçeyi hem puan hem de taksitle alabilir miyim?
+    - Puan kullanıp kalan tutarı taksitle ödeyebilir miyim?
+    - Taksit seçenekleri puan kullanımını etkiler mi?
+    - Puan kullanıldıktan sonra taksit seçenekleri
+    - Kredi kartı taksitlendirmesi nasıl yapılır?
+
+- intent: puan_gonderme
+  examples: |
+    - Puanları başka birine transfer edebilir miyim?
+    - Kazandığım puanları arkadaşıma gönderebilir miyim?
+    - Puan transferi mümkün mü?
+    - Bir başkasına puan gönderebilir miyim?
+    - Puanlarımı paylaşabilir miyim?
+
+- intent: puan_kazanim
+  examples: |
+    - Yapılan bir işlemde kaç puan kazanabilirim?
+    - Poliçe alımı için kaç puan kazanırım?
+    - Kampanyalardan kaç puan kazanabilirim?
+    - Hangi işlemlerde puan kazanabilirim?
+    - Puan kazanma şartları nelerdir?
+
+- intent: police_iptal_puan_iade
+  examples: |
+    - Poliçe iptalinde puanlar iade edilir mi?
+    - İptal edilen poliçenin puanları geri verilir mi?
+    - Puanlar poliçe iptali sonrasında iade edilir mi?
+    - İptal edilen poliçe için puan iadesi yapılır mı?
+    - Puanlarımı geri alabilir miyim?

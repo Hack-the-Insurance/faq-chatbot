@@ -1,0 +1,26 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+- story: Verify phone number
+  steps:
+  - user: |
+      Numaramı nasıl doğrulayabilirim?
+  - action: action_numara_dogrulama
+  - user: |
+      Numaramı doğruladım ama sisteme giriş yapamıyorum
+  - action: action_giris_sorunu
+  - user: |
+      Teşekkür ederim.
+  - action: utter_vedala
+
+- story: Unable to buy insurance for a specific device model
+  steps:
+  - user: |
+      ** model cihazım için sigorta satın alamıyorum
+  - action: action_cihaz_sorunu
+  - user: |
+      ** model cihazı için sigorta satın alabilir miyim?
+  - action: action_cihaz_sorunu 
+  - user: |
+      Başka bir sorum yok.
+  - action: utter_vedala

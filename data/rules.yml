@@ -1,0 +1,119 @@
+version: "3.1"
+
+rules:
+- rule: SelamKurali
+  steps:
+  - intent: selam
+  - action: utter_selam
+
+- rule: HalHatrKurali
+  steps:
+  - intent: hal_hatir_soru
+  - action: utter_hal_hatir_soru
+
+- rule: VedaKurali
+  steps:
+  - intent: vedala
+  - action: utter_vedala
+
+
+
+# - rule: HakaretEdildigindeSikayetFormu
+#   condition:
+#   - intent: hakaret_etme_intent
+#   steps:
+#   - action: action_open_complaint_form
+#   - active_loop: complaint_form
+#   - intent: stop
+#   - action: complaint_form
+
+
+- rule: NumaraDogrulamaKurali
+  steps:
+  - intent: numara_dogrulama
+  - action: utter_numara_dogrulama
+
+- rule: GirisSorunuKurali
+  steps:
+  - intent: giris_sorunu
+  - action: utter_giris_sorunu
+
+- rule: PoliceGoruntulemeKurali
+  steps:
+  - intent: police_goruntuleme
+  - action: utter_police_goruntuleme
+
+- rule: PoliceYenilemeKurali
+  steps:
+  - intent: police_yenileme
+  - action: utter_police_yenileme
+
+- rule: PolicedeDegisiklikKurali
+  steps:
+  - intent: policede_degisiklik
+  - action: utter_policede_degisiklik
+
+- rule: PoliceIptalKurali
+  steps:
+  - intent: police_iptal
+  - action: utter_police_iptal
+
+- rule: CihazSorunuKurali
+  steps:
+  - intent: cihaz_sorunu
+  - action: utter_cihaz_sorunu
+
+- rule: HasarBildirmeKurali
+  steps:
+  - intent: hasar_bildirme
+  - action: utter_hasar_bildirme
+
+- rule: PuanKullanimiKurali
+  steps:
+  - intent: puan_kullanimi
+  - action: utter_puan_kullanimi
+
+- rule: PuanTakipKurali
+  steps:
+  - intent: puan_takip
+  - action: utter_puan_takip
+
+- rule: PuanKartKullanimiKurali
+  steps:
+  - intent: puan_kart_kullanimi
+  - action: utter_puan_kart_kullanimi
+
+- rule: PuanAktifKurali
+  steps:
+  - intent: puan_aktif
+  - action: utter_puan_aktif
+
+- rule: PuanTLYKarsiligiKurali
+  steps:
+  - intent: puan_tly_karsiligi
+  - action: utter_puan_tly_karsiligi
+
+- rule: PuanSonKullanimKurali
+  steps:
+  - intent: puan_son_kullanim
+  - action: utter_puan_son_kullanim
+
+- rule: PuanTaksitKurali
+  steps:
+  - intent: puan_taksit
+  - action: utter_puan_taksit
+
+- rule: PuanGondermeKurali
+  steps:
+  - intent: puan_gonderme
+  - action: utter_puan_gonderme
+
+- rule: PuanKazanimKurali
+  steps:
+  - intent: puan_kazanim
+  - action: utter_puan_kazanim
+
+- rule: PoliceIptalPuanIadeKurali
+  steps:
+  - intent: police_iptal_puan_iade
+  - action: utter_police_iptal_puan_iade

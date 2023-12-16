@@ -1,0 +1,120 @@
+version: "3.1"
+
+intents:
+  - selam
+  - hal_hatir_soru
+  - vedala
+  - numara_dogrulama
+  - giris_sorunu
+  - police_goruntuleme
+  - police_yenileme
+  - policede_degisiklik
+  - police_iptal
+  - cihaz_sorunu
+  - hasar_bildirme
+  - puan_kullanimi
+  - puan_takip
+  - puan_kart_kullanimi
+  - puan_aktif
+  - puan_tly_karsiligi
+  - puan_son_kullanim
+  - puan_taksit
+  - puan_gonderme
+  - puan_kazanim
+  - police_iptal_puan_iade
+
+entities:
+  - tc_kimlik
+  - telefon_numara
+  - foto
+
+slots:
+  tc_kimlik:
+    type: text
+    mappings:
+      - type: from_text
+        intent: numara_dogrulama
+        role: tc_kimlik
+telefon_numara:
+    type: text
+    mappings:
+      - type: from_text
+        intent: numara_dogrulama
+        role: telefon_numara
+foto:
+    type: file
+    mappings:
+      - type: from_attachment
+        intent: numara_dogrulama
+        role: foto
+
+
+responses:
+  utter_selam:
+    - text: "Merhaba! Size nasıl yardımcı olabilirim?"
+  utter_hal_hatir_soru:
+    - text: "Merhaba! Nasılsınız? Size nasıl yardımcı olabilirim?"
+  utter_vedala:
+    - text: "Görüşürüz! Başka bir sorunuz var mı?"
+  utter_numara_dogrulama:
+    - text: "Numaranızı doğrulamak için TC kimlik kartınız ile birlikte bir kağıda güncelleme talep ettiğiniz telefon numaranızı ve 'Paylaşmış olduğum telefon numarasının bana ait olduğunu beyan ederim' yazısı ile imzalayarak bir fotoğraf çekiniz. İlgili fotoğrafı bizlere uygulamamızı kullanarak veya bilgi@anadolusigorta.com.tr adresine mail atarak ulaştırabilirsiniz."
+  utter_giris_sorunu:
+    - text: "Numaranız doğrulanmıştır, ancak girişler 2 veya 3 saat içinde gerçekleşecektir. Lütfen birkaç saat bekleyiniz."
+  utter_police_goruntuleme:
+    - text: "İleri tarihte başlayacak poliçenizi 'Poliçelerim' kartlarında 'İleri Tarihli' bölümünde görebilirsiniz. İleri tarihli Poliçeniz başladığı tarihten itibaren ana sayfada görebileceksiniz."
+  utter_police_yenileme:
+    - text: "Poliçelerinizi belli bir süre içerisinde yenilemeniz gerekmektedir. Poliçeniz bitmeden 15 gün içinde yenileme işlemini uygulamamız üzerinden yapabilirsiniz. Bitmiş poliçeleriniz için yenileme işlemi gerçekleşmez. Bu nedenle geçerlilik tarihi bitmiş poliçelerinizi yeni poliçe olarak yine uygulamamız üzerinden satın alabilirsiniz."
+  utter_policede_degisiklik:
+    - text: "Uygulamamız üzerinden poliçe oluştuktan sonra değişiklik yapılmamaktadır. Ancak, değişiklik yapmak istediğiniz poliçeleriniz hakkında çağrı merkezimizi arayarak detaylı bilgi alabilirsiniz."
+  utter_police_iptal:
+    - text: "Uygulamamız üzerinden iptal edebilirsiniz. Uygulama üzerinden iptal edemediğiniz poliçeleriniz için Müşteri İletişim Birimimize bildirim bırakabilirsiniz."
+  utter_cihaz_sorunu:
+    - text: "** model cihazının teknik adını da belirtmeniz durumunda en kısa sürede sisteme cihazınız eklenecektir. Cihazınız sisteme eklendikten sonra poliçe satın alma işlemini gerçekleştirebilirsiniz."
+  utter_hasar_bildirme:
+    - text: "Uygulamamız üzerinden hasar işlemleriniz için Müşteri İletişim Birimimize bildirim bırakabilir veya çağrı merkezimizi arayabilirsiniz."
+  utter_puan_kullanimi:
+    - text: "Kazanılan puanlar, poliçe satın alımlarında kullanılabilecektir."
+  utter_puan_takip:
+    - text: "Mevcut puanlara ilişkin işlemler uygulama üzerinde Cüzdanım kısmından kontrol edilebilecektir. Cüzdanım kısmında, kazanılan puan miktarı, puan kazanım tarihi, puanın durumu bilgileri bulunmaktadır."
+  utter_puan_kart_kullanimi:
+    - text: "Poliçeler, puan durumuna göre poliçe tutarının tamamı puan ile, tamamı kredi kartı ile, bir kısmı puan ile bir kısmı da kredi kartı ile satın alınabilecektir."
+  utter_puan_aktif:
+    - text: "Kazanılan puanlar, farklı bir kampanya kurgulanmamışsa hemen kullanılabilir olacaktır."
+  utter_puan_tly_karsiligi:
+    - text: "1 puan, 1 Türk Lirası olarak kullanılacaktır."
+  utter_puan_son_kullanim:
+    - text: "Puanlar, aktif olduktan sonra 12 ay içerisinde kullanılmazsa iptal edilecektir."
+  utter_puan_taksit:
+    - text: "Bir poliçe hem puan kullanılarak hem de taksit ile satın alınmak isteniyorsa, puan kullanımı sonrasında kalan tutar taksitlendirilecektir."
+  utter_puan_gonderme:
+    - text: "Hayır. Puan kazanımları kişiye özeldir. Bu nedenle farklı bir kişiye puan gönderimi olmayacaktır."
+  utter_puan_kazanim:
+    - text: "Hayır. Yapılan bir işlemde çakışan kampanyalar varsa en çok puanı veren kampanyanın puanı kazanılacaktır."
+  utter_police_iptal_puan_iade:
+    - text: "Hayır. Poliçe iptallerinde puanlar iade edilmeyecektir."
+
+
+
+actions:
+  - action_selam
+  - action_hal_hatir_soru
+  - action_vedala
+  - action_numara_dogrulama
+  - action_giris_sorunu
+  - action_police_goruntuleme
+  - action_police_yenileme
+  - action_policede_degisiklik
+  - action_police_iptal
+  - action_cihaz_sorunu
+  - action_hasar_bildirme
+  - action_puan_kullanimi
+  - action_puan_takip
+  - action_puan_kart_kullanimi
+  - action_puan_aktif
+  - action_puan_tly_karsiligi
+  - action_puan_son_kullanim
+  - action_puan_taksit
+  - action_puan_gonderme
+  - action_puan_kazanim
+  - action_police_iptal_puan_iade
+

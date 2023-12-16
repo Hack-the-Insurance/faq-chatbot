@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+
+- story: numara_dogrulama_hikayesi
+  steps:
+  - intent: selam
+  - action: utter_selam
+  - intent: numara_dogrulama
+  - action: utter_numara_dogrulama
+  - intent: giris_sorunu
+  - action: utter_giris_sorunu
+
+- story: police_goruntuleme_hikayesi
+  steps:
+  - intent: selam
+  - action: utter_selam
+  - intent: police_goruntuleme
+  - action: utter_police_goruntuleme
+  - intent: police_yenileme
+  - action: utter_police_yenileme
+
+- story: hasar_bildirme_hikayesi
+  steps:
+  - intent: selam
+  - action: utter_selam
+  - intent: hasar_bildirme
+  - action: utter_hasar_bildirme
+  - intent: vedala
+  - action: utter_vedala
+
