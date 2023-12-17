@@ -55,8 +55,8 @@ streamlit run app.py
 ---
 
 
+https://github.com/Hack-the-Insurance/faq-chatbot/assets/88631980/01214525-edce-499b-b8c1-2978d64c2e3f
 
-https://github.com/Hack-the-Insurance/faq-chatbot/assets/88631980/993fc5b2-d0cd-4d5e-acf2-28f9caa017c2
 
 
 
