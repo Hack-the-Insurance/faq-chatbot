@@ -1,0 +1,5 @@
+pip==22.0.2
+python==3.10.12
+rasa==3.6.15
+requests==2.31.0
+streamlit==1.29.0
