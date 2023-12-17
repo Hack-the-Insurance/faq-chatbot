@@ -1,0 +1,46 @@
+<html>
+    <body>
+        <script>
+          !(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.1/lib/index.js"),
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    initPayLoad: '/greet',
+                    customData: { language: "tr" },
+                    socketUrl: "http://localhost:5005",
+                    title: "Anadolu Sigorta",
+                    subtitle: "Merhaba! Size nasıl yardımcı olabilirim?",
+                  },
+                  null
+                );
+              }),
+              t.insertBefore(e, t.firstChild);
+
+            document.addEventListener("keydown", function (event) {
+              if (event.key === "Enter") {
+                window.WebChat.default(
+                  {},
+                  store => {
+                    const textInput = document.querySelector(
+                      ".main .footer .input"
+                    );
+                    if (textInput.value) {
+                      store.dispatch({
+                        type: "WEB_CHAT/SEND_MESSAGE",
+                        payload: { text: textInput.value }
+                      });
+                      textInput.value = "";
+                    }
+                  }
+                );
+              }
+            });
+          })();
+        </script>
+    </body>
+</html>
