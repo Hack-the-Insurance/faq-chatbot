@@ -4,9 +4,9 @@ This application was developed as part of the Anadolu Sigorta Hackathon. It's a 
 
 ## Technologies Used
 
-- [Rasa](https://rasa.com/docs/rasa/)- Rasa version: 3.6.15
-- [Requests](https://requests.readthedocs.io/en/latest/user/quickstart.html)- Requests version: 2.31.0
-- [Streamlit](https://docs.streamlit.io/library/get-started)- Streamlit: 1.29.0
+- [Rasa](https://rasa.com/docs/rasa/) - Rasa version: 3.6.15
+- [Requests](https://requests.readthedocs.io/en/latest/user/quickstart.html) - Requests version: 2.31.0
+- [Streamlit](https://docs.streamlit.io/library/get-started) - Streamlit: 1.29.0
 
 ---
 
@@ -48,7 +48,7 @@ cd <project-directory>
 ```bash
 rasa shell
 ```
-- Launch the Streamlit server in another terminal
+- Launch the Streamlit app in another terminal
 ```bash
 streamlit run app.py
 ```
