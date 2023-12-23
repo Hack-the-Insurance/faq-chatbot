@@ -14,7 +14,7 @@ This application was developed as part of the Anadolu Sigorta Hackathon. It's a 
 
 ### Environment
 
-Ensure that your Python version is set to `3.10.12`:
+Ensure that your Python version is set to `3.10.12` (pip version is `22.0.2`):
 
 ```bash
 python --version
@@ -33,22 +33,27 @@ virtualenv venv
 ```bash
 source venv/bin/activate
 ```
-- Installing the necessary libraries:
-```bash
-pip install -r requirements.txt
-```
 - Set up your .env file:
 
 ```bash
 cd <project-directory>
 ```
 
+- Installing the necessary libraries:
+```bash
+pip install -r requirements.txt
+```
+- Also install transformers package for Rasa:
+```bash
+pip install rasa[transformers]
+```
+
 ### Run
-- rasa connection
+- Rasa connection:
 ```bash
 rasa shell
 ```
-- Launch the Streamlit app in another terminal
+- Launch the Streamlit app in another terminal:
 ```bash
 streamlit run app.py
 ```
